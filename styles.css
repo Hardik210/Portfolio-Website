@@ -1,48 +1,61 @@
-body {
+* {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #050505;
-    color: white;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background: #0a0a0a;
+    color: #fff;
     overflow-x: hidden;
 }
 
-/* GRID BACKGROUND */
-.bg-grid {
+/* Animated Grid Background */
+body::before {
+    content: "";
     position: fixed;
     width: 100%;
     height: 100%;
-    background: linear-gradient(#0f0f0f 1px, transparent 1px),
-                linear-gradient(90deg, #0f0f0f 1px, transparent 1px);
+    background: linear-gradient(#0ff1, transparent 1px),
+                linear-gradient(90deg, #0ff1, transparent 1px);
     background-size: 40px 40px;
     z-index: -1;
-    animation: moveGrid 10s linear infinite;
 }
 
-@keyframes moveGrid {
-    0% {transform: translateY(0);}
-    100% {transform: translateY(40px);}
-}
-
-/* NAVBAR */
-header {
+/* Navbar */
+.navbar {
     position: fixed;
     width: 100%;
-    backdrop-filter: blur(10px);
-    background: rgba(0,0,0,0.5);
-}
-
-nav {
+    padding: 15px 50px;
     display: flex;
     justify-content: space-between;
-    padding: 15px 40px;
+    align-items: center;
+    background: rgba(20, 20, 20, 0.5);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #0ff3;
 }
 
-.logo {
-    font-family: 'Orbitron';
-    color: #00fff7;
+.navbar ul {
+    display: flex;
+    list-style: none;
 }
 
-/* HERO */
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar a {
+    color: #0ff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    text-shadow: 0 0 10px #0ff;
+}
+
+/* Hero */
 .hero {
     height: 100vh;
     display: flex;
@@ -51,91 +64,68 @@ nav {
     align-items: center;
 }
 
-/* NEON TEXT */
-.glow {
-    font-family: 'Orbitron';
-    font-size: 40px;
-    color: #00fff7;
-    text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7;
-}
-
-/* BUTTON */
-button {
-    padding: 12px 25px;
-    border: none;
-    background: transparent;
-    color: #00fff7;
-    border: 1px solid #00fff7;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background: #00fff7;
-    color: black;
-    box-shadow: 0 0 20px #00fff7;
-}
-
-/* SECTIONS */
+/* Sections */
 .section {
-    padding: 100px 20px;
+    padding: 100px 10%;
     text-align: center;
 }
 
-/* CARDS */
-.cards {
+/* Cards */
+.card-container {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .card {
-    margin: 15px;
-    padding: 30px;
-    border: 1px solid #00fff7;
+    padding: 20px;
+    width: 200px;
+    border: 1px solid #0ff3;
     border-radius: 10px;
     transition: 0.3s;
 }
 
-/* GAMING HOVER EFFECT */
 .card:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 0 20px #00fff7;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #0ff;
 }
 
-/* EXTRA GLOW */
-.glow-card {
-    position: relative;
-}
-
-.glow-card::before {
-    content: "";
-    position: absolute;
-    inset: -2px;
-    background: linear-gradient(45deg, #00fff7, transparent);
-    filter: blur(10px);
-    opacity: 0;
+/* Neon Button */
+.neon-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid #0ff;
+    background: transparent;
+    color: #0ff;
+    cursor: pointer;
     transition: 0.3s;
 }
 
-.glow-card:hover::before {
-    opacity: 1;
+.neon-btn:hover {
+    background: #0ff;
+    color: black;
+    box-shadow: 0 0 20px #0ff;
 }
 
-/* CURSOR */
+/* Cursor */
 .cursor {
+    position: fixed;
     width: 10px;
     height: 10px;
-    background: #00fff7;
-    position: fixed;
+    background: #0ff;
     border-radius: 50%;
     pointer-events: none;
-    box-shadow: 0 0 10px #00fff7;
+    box-shadow: 0 0 10px #0ff;
 }
 
-/* MOBILE */
-@media(max-width:768px){
-    .cards{
-        flex-direction: column;
+/* Responsive */
+@media(max-width: 768px) {
+    .navbar {
+        padding: 15px;
+    }
+
+    .card {
+        width: 150px;
     }
 }
