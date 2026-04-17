@@ -3,68 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hardik Varshney | Game Developer</title>
+<title>Hardik Varshney | Game Dev</title>
+
 <link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
+<div class="bg-grid"></div>
+<div class="cursor"></div>
 
 <header>
     <nav>
-        <h1 class="logo">Hardik.dev</h1>
+        <h1 class="logo">HV</h1>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 </header>
 
 <section id="home" class="hero">
-    <h2>Hello, I'm <span>Hardik Varshney</span></h2>
-    <p>BTech CSE (Gaming Tech) Student @ MRIIRS</p>
-    <button onclick="scrollToSection('projects')">View My Work</button>
-</section>
-
-<section id="about" class="section">
-    <h2>About Me</h2>
-    <p>I am a passionate game development student specializing in gaming technology.</p>
+    <h2 class="glow">Hardik Varshney</h2>
+    <p class="typing"></p>
+    <button onclick="scrollToSection('projects')">Enter Portfolio</button>
 </section>
 
 <section id="skills" class="section">
     <h2>Skills</h2>
-    <div class="skills-container">
-        <div class="skill">C++</div>
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">Unreal Engine</div>
-        <div class="skill">Blender</div>
+    <div class="cards">
+        <div class="card">C++</div>
+        <div class="card">Unreal Engine</div>
+        <div class="card">Blender</div>
+        <div class="card">JavaScript</div>
     </div>
 </section>
 
 <section id="projects" class="section">
     <h2>Projects</h2>
-    <div class="projects-container">
-        <div class="project-card">
-            <h3>Solar Energy Calculator</h3>
+    <div class="cards">
+        <div class="card glow-card">
+            <h3>Solar Calculator</h3>
         </div>
-        <div class="project-card">
+        <div class="card glow-card">
             <h3>Expense Tracker</h3>
+        </div>
+        <div class="card glow-card">
+            <h3>UE Game Prototype</h3>
         </div>
     </div>
 </section>
-
-<section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email: hardik@example.com</p>
-</section>
-
-<footer>
-    <p>© 2026 Hardik Varshney</p>
-</footer>
 
 <script src="script.js"></script>
 </body>
