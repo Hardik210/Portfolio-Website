@@ -1,59 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hardik Varshney | Game Dev</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardik Varshney | Game Developer</title>
+    <link rel="stylesheet" href="styles.css">
 
-<link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<div class="bg-grid"></div>
+<!-- Custom Cursor -->
 <div class="cursor"></div>
 
-<header>
-    <nav>
-        <h1 class="logo">HV</h1>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-        </ul>
-    </nav>
-</header>
+<!-- Navbar -->
+<nav class="navbar">
+    <h2 class="logo">HV</h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
+<!-- Hero Section -->
 <section id="home" class="hero">
-    <h2 class="glow">Hardik Varshney</h2>
-    <p class="typing"></p>
-    <button onclick="scrollToSection('projects')">Enter Portfolio</button>
+    <h1>Hardik Varshney</h1>
+    <h2><span id="typing"></span></h2>
+    <button class="neon-btn">Explore</button>
 </section>
 
+<!-- About -->
+<section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+        BTech CSE student specializing in Gaming Technology. Passionate about building immersive 
+        experiences using Unreal Engine and C++. I love combining creativity with technology.
+    </p>
+</section>
+
+<!-- Skills -->
 <section id="skills" class="section">
     <h2>Skills</h2>
-    <div class="cards">
+    <div class="card-container">
         <div class="card">C++</div>
+        <div class="card">HTML</div>
+        <div class="card">CSS</div>
+        <div class="card">JavaScript</div>
         <div class="card">Unreal Engine</div>
         <div class="card">Blender</div>
-        <div class="card">JavaScript</div>
     </div>
 </section>
 
+<!-- Projects -->
 <section id="projects" class="section">
     <h2>Projects</h2>
-    <div class="cards">
-        <div class="card glow-card">
-            <h3>Solar Calculator</h3>
-        </div>
-        <div class="card glow-card">
-            <h3>Expense Tracker</h3>
-        </div>
-        <div class="card glow-card">
-            <h3>UE Game Prototype</h3>
-        </div>
+    <div class="card-container">
+        <div class="card">Solar Energy Calculator</div>
+        <div class="card">Expense Tracker</div>
+        <div class="card">UE Game Prototype</div>
     </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section">
+    <h2>Contact</h2>
+    <button class="neon-btn">Email Me</button>
 </section>
 
 <script src="script.js"></script>
